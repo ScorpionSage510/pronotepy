@@ -76,6 +76,7 @@ def _educonnect(
     """
     if not url:
         raise ENTLoginError("Missing url attribute")
+    url = url.split('&')[0]
 
     log.debug(f"[EduConnect {url}] Logging in with {username}")
 
@@ -121,6 +122,7 @@ def _cas_edu(
     """
     if not url:
         raise ENTLoginError("Missing url attribute")
+    url = url.split('&')[0]
 
     log.debug(f"[ENT {url}] Logging in with {username}")
 
